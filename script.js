@@ -22,9 +22,9 @@ function addToDo() {
       const row = document.createElement('tr');
       toDoList.append(row);
 
-      const toDoitem = document.createElement('td');
-      toDoitem.textContent = toDo.value;
-      row.append(toDoitem);
+      const toDoItem = document.createElement('td');
+      toDoItem.textContent = toDo.value;
+      row.append(toDoItem);
 
       const priorShow = document.createElement('td');
       switch (prior.value) {
@@ -42,7 +42,8 @@ function addToDo() {
 
       const ends = document.createElement('td');
       if (!deadline.value) {
-         row.append('No deadline');
+         ends.textContent = 'No deadline';
+         row.append(ends);
       } else {
          ends.textContent = deadline.value;
          row.append(ends);
@@ -50,8 +51,24 @@ function addToDo() {
 
 
       const done = document.createElement('td');
-      done.innerHTML = '<div class="input-group mb-3"><div class="input-group-prepend"><div class="input-group-text"><input type="checkbox" id="completed"></div></div><label class="form-control">Completed</label></div>'
+      const check = document.createElement('input');
+      check.setAttribute('type', 'checkbox');
       row.append(done);
+      done.append(check);
+
+      check.addEventListener('click', completed);
+
+      function completed() {
+         if (check.checked) {
+            toDoItem.classList.add('line-through');
+            ends.classList.add('line-through');
+            row.classList.add('disable');
+         } else {
+            toDoItem.classList.remove('line-through');
+            ends.classList.remove('line-through');
+            row.classList.remove('disable');
+         }
+      }
 
       const remove = document.createElement('td');
       remove.innerHTML = '<button type="button" class="btn btn-danger">Delete</button>';

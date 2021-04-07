@@ -4,3 +4,10 @@
    box-sizing: border-box;
 }
 
+.line-through {
+   text-decoration: line-through;
+}
+
+.disable {
+   opacity: 0.5;
+}
