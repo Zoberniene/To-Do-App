@@ -7,6 +7,7 @@ const deadline = document.querySelector('#deadline');
 const form = document.querySelector('form');
 const table = document.querySelector('table');
 const toDoList = document.querySelector('tbody');
+let doneArray = [];
 
 btnAdd.addEventListener('click', function (e) {
    e.preventDefault();
@@ -63,6 +64,8 @@ function addToDo() {
             toDoItem.classList.add('line-through');
             ends.classList.add('line-through');
             row.classList.add('disable');
+            //doneArray.push(toDoItem.value);
+            console.log(row);
          } else {
             toDoItem.classList.remove('line-through');
             ends.classList.remove('line-through');
@@ -80,6 +83,6 @@ function addToDo() {
       })
 
    } else {
-      alert('Please enter a new task whick contain 5 or more symbols!');
+      alert('Please enter a new task that contains 5 or more symbols!');
    }
 }
