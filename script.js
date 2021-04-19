@@ -46,7 +46,7 @@ function addToDo() {
          ends.textContent = 'No deadline';
          row.append(ends);
       } else {
-         ends.textContent = deadline.value;
+         ends.textContent = `${deadline.value.slice(0, 10)} ${deadline.value.slice(11, 16)}`;
          row.append(ends);
       }
 

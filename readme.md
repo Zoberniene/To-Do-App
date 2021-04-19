@@ -8,10 +8,10 @@ List to organize and prioritize tasks. Great exercise for learning DOM manipulat
 
 * A user can add a task.
 ![image](https://user-images.githubusercontent.com/38878597/115179365-dd89a700-a0db-11eb-9603-24bcca7da08c.png)
-![image](https://user-images.githubusercontent.com/38878597/115179389-e67a7880-a0db-11eb-8641-ac4d8b36ffa7.png)
+![image](https://user-images.githubusercontent.com/38878597/115264080-aac4ca80-a13e-11eb-9b09-918e7b15c30b.png)
 
 * Mark a task as completed.
-![image](https://user-images.githubusercontent.com/38878597/115179402-ec705980-a0db-11eb-9c49-10a39d2627a9.png)
+![image](https://user-images.githubusercontent.com/38878597/115264128-b1534200-a13e-11eb-971b-dca3a8383940.png)
 
 * Delete an already added task.
 
@@ -26,5 +26,4 @@ Bootstrap v4.6 (https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
 * Add sorting by deadline and priority.
 * Marking as completed moves item down the list.
-* Make deadline to look prettier.
 * Find other option than alert if a user enters too short task's title.
